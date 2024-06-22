@@ -3,6 +3,8 @@
 
 /**
  * main - Entry point
+ * message - contains text
+ * write - writes value from message
  * Return: Always 1 (Success)
  */
 int main(void)
