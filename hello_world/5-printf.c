@@ -1,8 +1,9 @@
-#include<stdio.h> 
+#include <stdio.h>
+
 /**
- * main - function
+ * main - Entry point
  *
- * return - returns 0
+ * return - void
  */
 int main(void)
 {
