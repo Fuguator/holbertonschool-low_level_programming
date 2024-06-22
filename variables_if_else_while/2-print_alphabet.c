@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char letters;
+	unsigned char letters;
 
 	for(letters = '97'; letters <= '122'; letters++)
 		putchar(letters);
