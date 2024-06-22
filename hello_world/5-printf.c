@@ -3,7 +3,7 @@
 /**
  * main - function
  *
- * return - void
+ * return - returns 0
  */
 int main(void)
 {
