@@ -2,14 +2,14 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
+ * main - function
  * mess - contains text
  * write - writes value from mess
- * Return: Always 1 (Success)
+ * Return: returns 1
  */
 int main(void)
 {
-	char *mess= "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char *mess = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	write(2, mess, 59);
 	return (1);
 }
