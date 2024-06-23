@@ -1,4 +1,3 @@
-/* File: 1-main.c */
 #include "main.h"
 
 /**
@@ -11,4 +10,3 @@ int main(void)
     print_alphabet();
     return (0);
 }
-
