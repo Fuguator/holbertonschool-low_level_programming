@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-	int n, num1 = 0, num2 = 1, sum;
+	unsigned int n, num1 = 0, num2 = 1, sum;
 
 	for (n = 0; n < 50; n++)
 	{
 		sum = num1 + num2;
-		printf("%d", sum);
+		printf("%u", sum);
 		num1 = num2;
 		num2 = sum;
 
