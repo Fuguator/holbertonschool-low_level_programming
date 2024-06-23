@@ -10,7 +10,7 @@ int main(void)
 	for (n = 0; n < 50; n++)
 	{
 		sum = num1 + num2;
-		printf(sum);
+		printf("%d", sum);
 		num1 = num2;
 		num2 = sum;
 
