@@ -7,7 +7,7 @@ int main(void)
 {
 	unsigned long int num1 = 0, num2 = 1, sum, res;
 
-	while (true)
+	while (1)
 	{
 		sum = num1 + num2;
 		if (sum <= 4000000)
