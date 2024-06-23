@@ -1,4 +1,3 @@
-/* File: 1-alphabet.c */
 #include "main.h"
 
 /**
@@ -14,4 +13,3 @@ void print_alphabet(void)
     }
     _putchar('\n');        // Print a new line after printing all letters
 }
-
