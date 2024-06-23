@@ -16,7 +16,7 @@ int main(void)
 			res += sum;
 
 		num1 = num2;
-		2 = sum;
+		num2 = sum;
 	}
 	printf("%lu", res);
 
