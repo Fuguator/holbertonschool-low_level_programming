@@ -5,11 +5,11 @@
  */
 void print_alphabet(void)
 {
-    char letter = 'a';  // Start with 'a', the first lowercase letter
+    char letter = 'a';
     while (letter <= 'z')
     {
-        _putchar(letter);  // Print the current letter
-        letter++;          // Move to the next letter in the alphabet
+        _putchar(letter);
+        letter++;
     }
-    _putchar('\n');        // Print a new line after printing all letters
+    _putchar('\n');
 }
