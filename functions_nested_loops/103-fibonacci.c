@@ -13,6 +13,8 @@ int main(void)
 		sum = num1 + num2;
 		if (sum <= 4000000)
 			continue;
+		else
+			break;
 		if ((sum % 2) == 0)
 			res += sum;
 
