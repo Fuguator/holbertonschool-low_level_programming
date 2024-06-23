@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _isalpha - checks if c is letter
- * @c: vatiable that we check
- * Returm: 1 if c letter, otherwise 0
  * _isalpha - func
+ * @c: variable
+ * Return: 1 if letter, 0 otherwise
  */
 
 int _isalpha(int c)
