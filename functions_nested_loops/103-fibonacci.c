@@ -11,9 +11,7 @@ int main(void)
 	while (1)
 	{
 		sum = num1 + num2;
-		if (sum <= 4000000)
-			continue;
-		else
+		if (sum > 4000000)
 			break;
 		if ((sum % 2) == 0)
 			res += sum;
