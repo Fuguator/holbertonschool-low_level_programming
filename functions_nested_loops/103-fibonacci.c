@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-	unsigned long int num1 = 0, num2 = 1, sum, res;
+	unsigned long int num1 = 0, num2 = 1, sum;
+	float res;
 
 	while (1)
 	{
@@ -18,7 +19,7 @@ int main(void)
 		num1 = num2;
 		num2 = sum;
 	}
-	printf("%lu", res);
+	printf("%.0f\n", res);
 
 	return (0);
 }
