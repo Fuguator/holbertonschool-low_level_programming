@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int n, num1 = 1, num2 = 2, sum;
+	int n, num1 = 0, num2 = 1, sum;
 
 	for (n = 0; n < 50; n++)
 	{
