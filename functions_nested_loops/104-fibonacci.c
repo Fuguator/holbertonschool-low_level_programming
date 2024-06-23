@@ -1,83 +1,49 @@
 #include <stdio.h>
-#include "bignum.h"
+
 /**
- * printbig - func
- * @a: var
- * initbig - func
- * addbig - func
  * main - func
+ * Return: 0
  */
-
-void printbig(Bignum a)
-{
-	int leading = 1;
-
-	for (int i = 0; i < N; ++i)
-	{
-		if (a.digits[i])
-		{
-			leading = 0;
-			printf("%c", a.digits[i] + '0');
-		}
-		else
-		{
-			if (!leading)
-				printf("0");
-		}
-	}
-	if (leading)
-		printf("0");
-	puts("");
-}
-
-Bignum initbig(int x)
-{
-	Bignum a = {{0}};
-
-	a.digits[N - 1] = x;
-	return (a);
-}
-
-Bignum addbig(Bignum a, Bignum b)
-{
-	Bignum c;
-	int sum, carry = 0;
-
-	for (int i = N - 1; i >= 0; --i)
-	{
-		sum = a.digits[i] + b.digits[i] + carry;
-		if (sum <= 9)
-		{
-			c.digits[i] = sum;
-			carry = 0;
-		}
-		else
-		{
-			c.digits[i] = sum - 10;
-			carry = 1;
-		}
-	}
-	return (c);
-}
-
 int main(void)
 {
-	Bignum a, b, c;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
 
-	a = initbig(1);
-	b = initbig(1);
-
-	printf("  1 ");
-	printbig(a);
-	printf("  2 ");
-	printbig(a);
-
-	for (int i = 3; i <= 1000; ++i)
+	for (count = 0; count < 92; count++)
 	{
-		c = addbig(a, b);
-		printf("%3d ", i);
-		printbig(c);
-		a = b;
-		b = c;
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
 	}
+
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
+	printf("\n");
+	return (0);
 }
