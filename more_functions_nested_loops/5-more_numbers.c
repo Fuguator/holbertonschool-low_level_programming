@@ -4,7 +4,7 @@
  */
 void more_numbers(void)
 {
-	int a, b, c;
+	int a, b, c, res;
 
 	for (a = '0'; a <= '9'; a++)
 	{
@@ -12,7 +12,8 @@ void more_numbers(void)
 		{
 			for (c = '0'; c <= '5'; c++)
 			{
-				_putchar(b + c);
+				res = b + c;
+				_putchar(res);
 			}
 			_putchar('\n');
 		}
