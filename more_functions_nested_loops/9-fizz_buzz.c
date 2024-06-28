@@ -17,13 +17,13 @@ int main(void)
 		{
 			printf("Buzz ");
 
-			if (a == 99)
+			if (a != 100)
 				printf("Fizz");
 			else
 				printf("Fizz ");
 		}
 		else
-			printf(a);
+			printf("%d", a);
 		printf("\n");
 		return (0);
 }
