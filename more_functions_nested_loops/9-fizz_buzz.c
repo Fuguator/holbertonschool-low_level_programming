@@ -7,7 +7,7 @@ int main(void)
 {
 	int a;
 
-	for (a = 0; a < 100; a++)
+	while (a++ < 100)
 	{
 		if ((a % 3 == 0) && (a % 5 == 0))
 			printf("FizzBuzz ");
