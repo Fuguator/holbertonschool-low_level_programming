@@ -5,10 +5,14 @@
  */
 void print_square(int size)
 {
-	int l;
+	int l, w;
 
 	for (l = 0; l < size; l++)
-		for (l = 0; l < size; l++)
+	{
+		for (w = 0; w < size; w++)
 			_putchar('#');
+		_putchar('#');
+		_putchar('\n');
+	}
 	_putchar('\n');
 }
