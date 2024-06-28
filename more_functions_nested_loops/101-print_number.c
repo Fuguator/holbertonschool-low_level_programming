@@ -11,13 +11,13 @@ void print_number(int n)
 	{
 		print_number(a / 10);
 	}
-	else if ((a <= 9) && (a >= 0))
-		_putchar(a + '0');
-	else
+	else if
 	{
 		_putchar('-');
 		a = -a;
 	}
+	else
+		_putchar(a + '0');
 	_putchar(a % 10 + '0');
 
 }
