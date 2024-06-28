@@ -9,17 +9,17 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		while (y++ < size)
+		while (b++ < size)
 		{
-			space = size - y - 1;
-			while (x++ < size)
+			space = size - b - 1;
+			while (a++ < size)
 			{
-				if (space > x)
+				if (space > a)
 					_putchar(' ');
 				else
 					_putchar('#');
 			}
-			x = 0;
+			a = 0;
 			_putchar ('\n');
 		}
 	}
