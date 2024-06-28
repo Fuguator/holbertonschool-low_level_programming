@@ -5,7 +5,17 @@
  */
 int main(void)
 {
-	int num = 612852475143;
+	long num = 612852475143;
+	int a;
 
+	while (a++ < num / 2)
+	{
+		if (num % a == 0)
+		{
+			num /= 2;
+			continue;
+		}
+	}
+	printf("%ld\n", num);
 	return (0);
 }
