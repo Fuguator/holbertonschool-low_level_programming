@@ -15,7 +15,7 @@ int main(void)
 			num /= 2;
 			continue;
 		}
-		for (a = 3; inc < num / 2; a += 2)
+		for (a = 3; a < num / 2; a += 2)
 		{
 			if (num % a == 0)
 				num /= a;
