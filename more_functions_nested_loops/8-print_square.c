@@ -14,7 +14,6 @@ void print_square(int size)
 			for (w = 0; w < size; w++)
 				_putchar('#');
 			_putchar('\n');
-			_putchar('#');
 		}
 		_putchar('\n');
 	}
