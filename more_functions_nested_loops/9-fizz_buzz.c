@@ -18,9 +18,9 @@ int main(void)
 			printf("Buzz ");
 
 			if (a != 100)
-				printf("Fizz");
+				printf("Buzz");
 			else
-				printf("Fizz ");
+				printf("Buzz ");
 		}
 		else
 			printf("%d ", a);
