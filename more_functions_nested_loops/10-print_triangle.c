@@ -5,21 +5,24 @@
  */
 void print_triangle(int size)
 {
-	int a, b = 0, space;
+	int w, l = 0, space;
 
 	if (size > 0)
 	{
-		while (b++ < size)
+		while (l < size)
 		{
-			space = size - b - 1;
-			while (a++ < size)
+			space = size - l - 1;
+			while (w++ < size)
 			{
-				if (space > a)
+				if (space > w)
 					_putchar(' ');
 				else
 					_putchar('#');
+				w++;
 			}
-			a = 0;
+			l++;
+			w = 0;
+
 			_putchar ('\n');
 		}
 	}
