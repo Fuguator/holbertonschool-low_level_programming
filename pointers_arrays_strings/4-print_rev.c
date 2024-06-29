@@ -1,5 +1,7 @@
 #include "main.h"
 /**
+ *  print_rev - func
+ *  @s: pointer
  */
 void print_rev(char *s)
 {
