@@ -11,7 +11,7 @@ int _atoi(char *s)
 	while (s[len] != '\0')
 		len++;
 
-	if (f != 0)
+	if (b != 0)
 	{
 		while (i < len && b == 0)
 		{
