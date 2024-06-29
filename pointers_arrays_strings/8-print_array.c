@@ -1,5 +1,4 @@
-#include <stdio>
-#include "main.h"
+#include <stdio.h>
 /**
  * print_array - func
  * @a: array
