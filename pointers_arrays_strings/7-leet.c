@@ -2,29 +2,21 @@
 /**
  * leet - func
  * @str: string
- * Return: str
+ * Return: r
  */
 char *leet(char *str)
 {
-	int a;
+	char *r = str;
+	char a[] = { 'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L' };
+	char n[] = { 4, 3, 0, 7, 1 };
+	int i = 0;
 
-	for (a = 0; str[a] != '\0'; a++)
+	while (*str)
 	{
-		while (str[a] == 'a' || str[a] == 'A')
-			str[a] = 4;
-
-		while (str[a] == 'e' || str[a] == 'E')
-			str[a] = '3';
-
-		while (str[a] == 'o' || str[a] == 'O')
-			str[a] = '0';
-
-		while (str[a] == 't' || str[a] == 'T')
-			str[a] = '7';
-
-		while (str[a] == 'l' || str[a] == 'L')
-			str[a] = '1';
+		for (i = 0; i < 5; i++)
+			if (*str == a[i])
+				*str = n[i] + '0';
+		str++;
 	}
-	
-	return (str);
+	return (r);
 }
