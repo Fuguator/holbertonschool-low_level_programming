@@ -10,7 +10,7 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int lenn1, lenn2, temp, rev, a, sum, num1, num2, carry;
-	char tmp[9999];
+	char tmp[10000];
 
 	lenn1 = lenn2 = rev = a = sum = num1 = num2 = carry = 0;
 	for (lenn1 = 0; n1[lenn1] != '\0'; lenn1++)
