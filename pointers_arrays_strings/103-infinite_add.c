@@ -9,13 +9,16 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int lenn1, lenn2, temp, rev, a, sum, numn1, numn2, carry;
+	int lenn1, lenn2, temp, rev, a, sum, num1, num2, carry;
 	char tmp[size_r * size_r];
 
-	lenn1 = lenn2 = rev = a = sum = numn1 = numn2 = carry = 0;
+	lenn1 = lenn2 = rev = a = sum = num1 = num2 = carry = 0;
 	for (lenn1 = 0; n1[lenn1] != '\0'; lenn1++)
 	for (lenn2 = 0; n2[lenn2] != '\0'; lenn2++)
-	return ((lenn1 + 2 > size_r || lenn2 + 2 > size_r) ? 0 : 0);
+
+	if (l1 + 2 > size_r || l2 + 2 > size_r)
+		return (0);
+
 	lenn1--, lenn2--;
 	while (a <= lenn1 || a <= lenn2)
 	{
