@@ -16,14 +16,14 @@ char *leet(char *str)
 		else if (str[a] == 'e' || str[a] == 'E')
 			str[a] = '3';
 
-		else if (str[i] == 'o' || str[i] == 'O')
-			str[i] = '0';
+		else if (str[a] == 'o' || str[a] == 'O')
+			str[a] = '0';
 
-		else if (str[i] == 't' || str[i] == 'T')
-			str[i] = '7';
+		else if (str[a] == 't' || str[a] == 'T')
+			str[a] = '7';
 
-		else if (str[i] == 'l' || str[i] == 'L')
-			str[i] = '1';
+		else if (str[a] == 'l' || str[a] == 'L')
+			str[a] = '1';
 	}
 	
 	return (str);
