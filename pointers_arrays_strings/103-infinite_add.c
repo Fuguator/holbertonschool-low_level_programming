@@ -30,24 +30,16 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		a++, rev++;
 	}
 	if (carry > 0)
-	{
-		r[a] = carry + '0';
-		r[a + 1] = '\0';
-	}
+		r[a] = carry + '0', r[a + 1] = '\0';
 	a = temp = 0;
 	while (a <= rev)
-	{
-		tmp[a] = r[rev - a];
-		temp++;
-		a++;
-	}
+		tmp[a] = r[rev - a], temp++, a++;
 	a = 0;
 	while (a < temp)
 	{
 		if (r[a] == '\0')
 			break;
-		r[a] = tmp[a];
-		a++;
+		r[a] = tmp[a], a++;
 	}
 	return (r);
 }
