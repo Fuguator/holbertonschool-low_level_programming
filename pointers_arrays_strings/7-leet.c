@@ -8,7 +8,7 @@ char *leet(char *str)
 {
 	int a = 0;
 
-	while (str[a] != '\0')
+	if (str[a] != '\0')
 	{
 		while (str[a] == 'a' || str[a] == 'A')
 			str[a] = 4;
