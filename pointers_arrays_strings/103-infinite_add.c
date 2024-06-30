@@ -9,25 +9,30 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int lenn1, lenn2, temp, rev, a, sum, num1, num2, carry;
+	int len1, len2, temp, rev, a, sum, num1, num2, carry;
 	char tmp[10000];
 
-	lenn1 = lenn2 = rev = a = sum = num1 = num2 = carry = 0;
-	for (lenn1 = 0; n1[lenn1] != '\0'; lenn1++)
-	for (lenn2 = 0; n2[lenn2] != '\0'; lenn2++)
+	len1 = len2 = rev = a = sum = num1 = num2 = carry = 0;
+	for (len1 = 0; n1[len1] != '\0'; len1++)
+	for (len2 = 0; n2[len2] != '\0'; len2++)
 
-	if (lenn1 + 2 > size_r || lenn2 + 2 > size_r)
+	if (len1 + 2 > size_r || len2 + 2 > size_r)
 		return (0);
 
-	lenn1--, lenn2--;
-	while (a <= lenn1 || a <= lenn2)
+	len1--, len2--;
+	while (a <= len1 || a <= len2)
 	{
-		num1 = (a <= lenn1) ? n1[lenn1 - a] - '0' : 0;
-		num2 = (a <= lenn2) ? n2[lenn2 - a] - '0' : 0;
+		num1 = num2 = 0;
+		if (a <= len1)
+			num1 = n1[len1 - a] - '0';
+		if (a <= len2 && (len2 - a) >= 0)
+			num2 = n2[len2 - a] - '0';
 		sum = num1 + num2 + carry;
-		carry = (sum >= 10) ? (sum -= 10, 1) : 0;
-		r[a] = sum + '0';
-		a++, rev++;
+		if (sum >= 10)
+			carry = 1, sum -= 10;
+		else
+			carry = 0;
+		r[a] = sum + '0', a++, rev++;
 	}
 	if (carry > 0)
 		r[a] = carry + '0', r[a + 1] = '\0';
