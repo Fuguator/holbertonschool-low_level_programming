@@ -6,9 +6,9 @@
  */
 char *leet(char *str)
 {
-	int a = 0;
+	int a;
 
-	if (str[a] != '\0')
+	for (a = 0; str[a] != '\0'; a++)
 	{
 		while (str[a] == 'a' || str[a] == 'A')
 			str[a] = 4;
