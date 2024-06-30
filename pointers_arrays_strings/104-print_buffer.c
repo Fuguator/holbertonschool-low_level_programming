@@ -46,5 +46,5 @@ void print_buffer(char *b, int size)
 
 		putchar('\n');
 	}
-	size == 0 ? putchar('\n'): ;
+	size == 0 ? putchar('\n'): 0;
 }
