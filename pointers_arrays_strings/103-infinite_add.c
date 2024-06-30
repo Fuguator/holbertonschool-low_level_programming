@@ -21,7 +21,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		n = m;
 		i >= 0 ? n += n1[i] - '0' : 0;
 		j >= 0 ? n += n2[j] - '0' : 0;
-		i < 0 && j < 0 && n == 0 ? break : 0;
+		if (i < 0 && j < 0 && n == 0)
+			break;
 		m = n / 10, r[k] = n % 10 + '0';
 	}
 	r[k] = '\0';
