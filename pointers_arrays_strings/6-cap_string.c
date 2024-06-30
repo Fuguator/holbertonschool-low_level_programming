@@ -28,7 +28,7 @@ char *cap_string(char *str)
 				tr = 0;
 			}
 
-			else if (str[i] > 64 && str[i] < 91 || str[i] > 47 && str[i] < 58)
+			else if ((str[i] > 64 && str[i] < 91) || (str[i] > 47 && str[i] < 58))
 				tr = 0;
 		}
 	}
