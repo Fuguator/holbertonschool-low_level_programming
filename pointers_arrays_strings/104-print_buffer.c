@@ -8,21 +8,21 @@
  */
 void print_line(char *c, int s, int l)
 {
-	int j, k;
+	int y, z;
 
-	for (j = 0; j <= 9; j++)
+	for (y = 0; y <= 9; y++)
 	{
-		if (j <= s)
-			printf("%02x", c[l * 10 + j]);
+		if (y <= s)
+			printf("%02x", c[l * 10 + y]);
 		else
 			printf("  ");
-		if (j % 2)
+		if (y % 2)
 			putchar(' ');
 	}
-	for (k = 0; k <= s; k++)
+	for (z = 0; z <= s; z++)
 	{
-		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-			putchar(c[l * 10 + k]);
+		if (c[l * 10 + z] > 31 && c[l * 10 + z] < 127)
+			putchar(c[l * 10 + z]);
 		else
 			putchar('.');
 	}
@@ -34,18 +34,17 @@ void print_line(char *c, int s, int l)
  */
 void print_buffer(char *b, int size)
 {
-	int i;
+	int x;
 
-	for (i = 0; i <= (size - 1) / 10 && size; i++)
+	for (x = 0; x <= (size - 1) / 10 && size; x++)
 	{
-		printf("%08x: ", i * 10);
-		if (i < size / 10)
-			print_line(b, 9, i);
+		printf("%08x: ", x * 10);
+		if (x < size / 10)
+			print_line(b, 9, x);
 		else
-			print_line(b, size % 10 - 1, i);
+			print_line(b, size % 10 - 1, x);
 
 		putchar('\n');
 	}
-	if (size == 0)
-		putchar('\n');
+	size == 0 ? putchar('\n'): ;
 }
