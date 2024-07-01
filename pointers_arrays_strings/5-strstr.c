@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _strstr - func
  * @haystack: variable
  * @needle: variable
