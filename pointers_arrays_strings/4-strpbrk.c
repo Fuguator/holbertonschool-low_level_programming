@@ -3,9 +3,8 @@
  * *_strpbrk - func
  * @s: variale
  * @accept: variable
- * Return: end of string 
+ * Return: end of string
 */
-
 char *_strpbrk(char *s, char *accept)
 {
 	int a;
