@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 		for (a = 0; accept[a]; a++)
 		{
 			if (accept[a] == *s)
-				bytes++, break;
+				n++, break;
 			else if ((accept[a + 1]) == '\0')
 				return (n);
 		}
