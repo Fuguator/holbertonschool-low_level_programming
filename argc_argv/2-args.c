@@ -5,11 +5,12 @@
  * @argv: var
  * Return: 0
  */
-int main(int argc, __attribute__((unused)) char **argv)
+int main(int argc, __attribute__((unused)) char **argv[])
 {
 	int i;
-
-	for (i = 1; i < argc - 1; i++)
-		printf("%s\n", argv[i]);
-	return (0);
+	
+	printf("%d\n", argc);
+	for (i = 1; i < argc; i++)
+		printf("%s", argv[i]);
+	return 0;
 }
