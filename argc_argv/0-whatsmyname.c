@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * main - func
  * @argc: var
@@ -7,6 +8,6 @@
  */
 int main(void argc, char *argv[])
 {
-	_puthar('argv[0]');
+	printf("argc = %d\n", argc);
 	return (0);
 }
