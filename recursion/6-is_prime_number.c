@@ -12,7 +12,7 @@ int mult(int i, int n)
 	if (n % i == 0)
 		return (0);
 	else
-		return (mult(i + 1, n);
+		return (mult(i + 1, n));
 }
 /**
  * is_prime_number - func
@@ -22,7 +22,7 @@ int mult(int i, int n)
 int is_prime_number(int n)
 {
 	if (n > 1)
-		return (mult(2, n);
+		return (mult(2, n));
 	else
 		return (0);
 }
