@@ -5,7 +5,7 @@
  * @argv: var
  * Return: 0
  */
-void main(int argc,`:wq char *argv[])
+void main(int argc, char *argv[])
 {
 	int i;
 
