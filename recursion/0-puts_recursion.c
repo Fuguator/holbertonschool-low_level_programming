@@ -5,7 +5,7 @@
  */
 void _puts_recursion(char *s)
 {
-	if (s[i] != '\n')
+	if (s[0] != '\n')
 	{
 		_putchar(s[0]);
 		_puts_recursion(s + 1);
