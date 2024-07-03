@@ -8,7 +8,7 @@
  * @argv: var
  * Return: 1 if error, 0 otherwise
  */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
 	int i;
 	unsigned int sum = 0, x;
