@@ -14,14 +14,14 @@ int main(int argc, char **argv)
 	unsigned int sum = 0, x;
 	char *a;
 
-	if (argc > 1)
+	if (argc > 0)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 0; i < argc; i++)
 		{
 			a = argv[i];
 			for (x = 0; x < strlen(a); x++)
 			{
-				if ((a[x] < '9') || (a[x] > '0'))
+				if ((a[x] < '9') && (a[x] > '0'))
 				{
 					printf("Error\n");
 					return (1);
