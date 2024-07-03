@@ -7,7 +7,7 @@
  * @argv: var
  * Return: 1 if error, 0 otherwise
  */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
 	int a = 0, b = 0, mul = 1;
 
