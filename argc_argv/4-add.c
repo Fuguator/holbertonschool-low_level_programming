@@ -14,12 +14,12 @@ int main(int argc, char **argv)
 	unsigned int sum = 0, x;
 	char *a;
 
-	if (argc > 1)
+	if (argc > 0)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 0; i < argc; i++)
 		{
 			a = argv[i];
-			for (x = 0; x < strlen(a); x++)
+			for (x = 0; x < strlen(a) - 1; x++)
 			{
 				if ((a[x] < 48) && (a[x] > 57))
 				{
