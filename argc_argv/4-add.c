@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 			a = argv[i];
 			for (x = 0; x < strlen(a); x++)
 			{
-				if ((a[x] < '9') && (a[x] > '9'))
+				if ((a[x] < '9') || (a[x] > '9'))
 				{
 					printf("Error\n");
 					return (1);
