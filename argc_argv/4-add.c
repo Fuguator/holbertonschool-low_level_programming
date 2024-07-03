@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	unsigned int sum = 0, x;
 	char *a;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
 		for (i = 0; i < argc - 1; i++)
 		{
