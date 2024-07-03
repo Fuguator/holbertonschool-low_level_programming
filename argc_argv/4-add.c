@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		for (i = 0; i < argc - 1; i++)
+		for (i = 0; i < argc; i++)
 		{
 			a = argv[i];
 			for (x = 0; x < strlen(a); x++)
