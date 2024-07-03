@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 			a = argv[i];
 			for (x = 0; x < strlen(a); x++)
 			{
-				if ((a[x] < 48) && (a[x] > 57))
+				if ((a[x] < 48) || (a[x] > 57))
 				{
 					printf("Error\n");
 					return (1);
