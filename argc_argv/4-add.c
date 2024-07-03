@@ -1,24 +1,38 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
+ * main - func
+ * @argc: var
+ * @argv: var
+ * Return: 1 if error, 0 otherwise
  */
 int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int i;
+	unsigned int sum = 0, x;
+	char *a;
 
-	while (i < argc - 1)
+	if (arg > 0)
 	{
-		if ((argv[i] >= 'a' && argv[i] <= 'z') || (argv[i] >= 'A' && argv[i] <= 'Z'))
+		for (i = 0; i < argc - 1; i++)
 		{
-			printf("Error\n");
-			return (0);
+			a = argv[i];
+			for (x = 0; x < strlen(a); x++)
+			{
+				if ((a[x] < 48) && (a[x] > 57))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(a), a++;
 		}
-		else
-		{
-			
-			sum += atoi(argv[i]);
-			printf("%d\n", sum);
-		}
+		printf("%d\n", sum);
+	}
+	else
+		printf("0\n");
+
 	return (0);
 }
