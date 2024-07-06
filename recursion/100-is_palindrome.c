@@ -2,7 +2,7 @@
 #include <string.h>
 /**
  */
-int len(char* *s)
+int len(char *s)
 {
 	int l = 0;
 
@@ -12,7 +12,7 @@ int len(char* *s)
 		s++;
 	}
 
-	return (1);
+	return (l + 1);
 
 }
 /**
