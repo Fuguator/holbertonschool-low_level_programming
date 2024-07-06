@@ -2,9 +2,20 @@
 #include <string.h>
 /**
  */
+int len(char *s)
+{
+	int l = 0;
+
+	while (*s)
+		l++;
+
+	return (l);
+
+}
+
 int is_palindrome(char *s)
 {
-	int i = 0, j = strlen(s) - 1;
+	int i = 0, j = len(*s);
 
 	if (i++ < j--)
 	{
