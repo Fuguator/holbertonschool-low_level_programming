@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  */
 int len(char *s)
@@ -12,7 +11,7 @@ int len(char *s)
 		s++;
 	}
 
-	return (l + 1);
+	return (l);
 
 }
 /**
