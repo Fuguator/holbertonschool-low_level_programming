@@ -10,6 +10,15 @@ int len(char *s)
 		return (0);
 	return (1 + len(s + 1));
 }
+int palind_rec(char *s, int i, int j)
+{
+	if (i < j)
+        {
+                if (s[i] != s[j])
+                        return (0);
+	}
+	return (palind_rec(s, i + 1, j - 1));
+}
 /**
  * is_palindrome - func
  * @s: var
@@ -17,13 +26,6 @@ int len(char *s)
  */
 int is_palindrome(char *s)
 {
-	int i = 0, j = len(s) - 1;
+	return (palind_rec(s, 0, len(s) - 1));
 
-	if (i < j)
-	{
-		if (s[i] != s[j])
-			return (0);
-		i++, j--;
-	}
-	return (1);
 }
