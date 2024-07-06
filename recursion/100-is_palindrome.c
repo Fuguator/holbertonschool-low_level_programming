@@ -11,7 +11,7 @@ int len(char *s)
 	if (*s != '\0')
 		l++;
 
-	return (l);
+	return (l + 1);
 }
 /**
  * is_palindrome - func
@@ -20,7 +20,7 @@ int len(char *s)
  */
 int is_palindrome(char *s)
 {
-	int i = 0, j = len(s);
+	int i = 0, j = len(s) - 1;
 
 	if (i < j)
 	{
