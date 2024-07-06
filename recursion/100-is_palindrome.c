@@ -26,9 +26,10 @@ int is_palindrome(char *s)
 	{
 		if (s[i] != s[j])
 			return (0);
+		else
+			return (1);
 		i++, j--;
 	}
-	else if (i == j)
 	{
 		if (s[i] == s[j])
 			return (1);
