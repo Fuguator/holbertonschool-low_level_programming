@@ -9,13 +9,13 @@ int len(char *s)
 	while (*s)
 		l++;
 
-	return (l);
+	return (l + 1);
 
 }
 
 int is_palindrome(char *s)
 {
-	int i = 0, j = len(*s);
+	int i = 0, j = len(*s) - 1;
 
 	if (i++ < j--)
 	{
