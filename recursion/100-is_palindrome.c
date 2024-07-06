@@ -6,7 +6,7 @@ int len(char *s)
 {
 	int l = 0;
 
-	while (*s)
+	if (*s)
 	{
 		l++;
 		s++;
@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 {
 	int i = 0, j = len(s) - 1;
 
-	while (i < j)
+	if (i < j)
 		if (s[i] != s[j])
 			return (0);
 	return (1);
