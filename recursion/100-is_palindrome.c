@@ -31,6 +31,5 @@ int is_palindrome(char *s)
 		if (s[i] == s[j])
 			return (1);
 	}
-	else
-		return (1);
+	return (1);
 }
