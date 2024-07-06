@@ -3,6 +3,7 @@
  * wildcmp - func
  * @s1: first string
  * @s2: second string
+ * Return: 1 if both strings are the same, 0 otherwise
  */
 int wildcmp(char *s1, char *s2)
 {
