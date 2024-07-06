@@ -2,7 +2,7 @@
 /**
  * len - func
  * @s: var
- * Return: l + 1
+ * Return: l
  */
 int len(char *s)
 {
@@ -16,7 +16,7 @@ int len(char *s)
 /**
  * is_palindrome - func
  * @s: var
- * Return: ;
+ * Return: 1 if palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
 {
@@ -26,8 +26,6 @@ int is_palindrome(char *s)
 	{
 		if (s[i] != s[j])
 			return (0);
-		else
-			return (1);
 		i++, j--;
 	}
 	return (1);
