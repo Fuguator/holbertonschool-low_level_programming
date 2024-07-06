@@ -12,11 +12,10 @@ int len(char *s)
 }
 int palind_rec(char *s, int i, int j)
 {
-	if (i < j)
-        {
-                if (s[i] != s[j])
-                        return (0);
-	}
+	if (i >= j)
+		return (1);
+	if (s[i] != s[j])
+		return (0);
 	return (palind_rec(s, i + 1, j - 1));
 }
 /**
