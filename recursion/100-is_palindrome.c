@@ -8,10 +8,13 @@ int len(char *s)
 {
 	int l = 0;
 
-	if (*s)
+	if (*s != '\0')
+	{
 		l++;
-
-	return (l);
+		return (l);
+	}
+	else
+		return (0);
 }
 /**
  * is_palindrome - func
