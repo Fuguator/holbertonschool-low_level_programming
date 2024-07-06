@@ -15,6 +15,7 @@ int len(char *s)
  * @s: str
  * @i: start of str
  * @j: end of str
+ * Return: 1 if palindrome, 0 otherwise
  */
 int palind_rec(char *s, int i, int j)
 {
