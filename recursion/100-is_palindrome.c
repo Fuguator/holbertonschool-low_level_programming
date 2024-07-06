@@ -1,5 +1,8 @@
 #include "main.h"
 /**
+ * len - func
+ * @s: var
+ * Return: l + 1
  */
 int len(char *s)
 {
@@ -11,10 +14,13 @@ int len(char *s)
 		s++;
 	}
 
-	return (l);
+	return (l + 1);
 
 }
 /**
+ * is_palindrome - func
+ * @s: var
+ * Return: ;
  */
 int is_palindrome(char *s)
 {
