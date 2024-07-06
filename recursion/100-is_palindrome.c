@@ -11,7 +11,6 @@ int len(char *s)
 	if (*s)
 	{
 		l++;
-		s++;
 	}
 
 	return (l);
