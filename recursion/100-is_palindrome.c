@@ -23,8 +23,8 @@ int len(char *s)
  */
 int is_palindrome(char *s)
 {
-        int i = 0, j = len(s) - 1;
-	
+	int i = 0, j = len(s) - 1;
+
 	if (i < j)
 	{
 		if (s[i] != s[j])
