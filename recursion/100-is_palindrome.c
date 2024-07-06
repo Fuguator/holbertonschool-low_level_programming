@@ -11,7 +11,7 @@ int len(char *s)
 	if (*s)
 		l++;
 
-	return (l + 1);
+	return (l);
 }
 /**
  * is_palindrome - func
