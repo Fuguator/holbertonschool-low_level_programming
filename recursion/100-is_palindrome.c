@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * len - func
- * @s: var
- * Return: l
+ * @s: str
+ * Return: len
  */
 int len(char *s)
 {
@@ -10,6 +10,12 @@ int len(char *s)
 		return (0);
 	return (1 + len(s + 1));
 }
+/**
+ * palind_rec - func (instead oof loop)
+ * @s: str
+ * @i: start of str
+ * @j: end of str
+ */
 int palind_rec(char *s, int i, int j)
 {
 	if (i >= j)
@@ -20,11 +26,10 @@ int palind_rec(char *s, int i, int j)
 }
 /**
  * is_palindrome - func
- * @s: var
+ * @s: str
  * Return: 1 if palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
 {
 	return (palind_rec(s, 0, len(s) - 1));
-
 }
