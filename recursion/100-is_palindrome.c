@@ -6,15 +6,9 @@
  */
 int len(char *s)
 {
-	int l = 0;
-
-	if (*s != '\0')
-	{
-		l++;
-		return (l);
-	}
-	else
+	if (*s == '\0')
 		return (0);
+	return (1 + len(s + 1));
 }
 /**
  * is_palindrome - func
