@@ -12,7 +12,7 @@ int len(char *s)
 		s++;
 	}
 
-	return (l + 1);
+	return (1);
 
 }
 
