@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
                         money -= 10;
                 else if (money < 10 && money >= 5)
                         money -= 5;
-                else if (money < 2 && money >= 1)
+                else if (money < 5 && money >= 2)
                         money -= 2;
                 else
                         money -= 1;
