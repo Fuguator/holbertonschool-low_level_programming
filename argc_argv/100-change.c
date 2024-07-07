@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
                         money -= 5;
                 else if (money < 2 && money >= 1)
                         money -= 2;
-                else if (money == 1)
+                else
                         money -= 1;
-                cents++;
 	}
+
 	printf("%d\n", cents);
 	return (0);
 }
