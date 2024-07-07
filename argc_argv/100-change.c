@@ -4,7 +4,7 @@
  */
 int main(int argc, char *argv[])
 {
-        int cents = 0, money;
+        int cents, money;
 
         if (argc != 2)
         {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
                 return (0);
         }
 
-        while (money > 0)
+        for (cents = 0; money > 0; cents++)
         {
                 if (money >= 25)                                                              money -= 25;
                 else if (money < 25 && money >= 10)
