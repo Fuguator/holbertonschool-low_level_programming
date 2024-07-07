@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - func
- * @argc - arg counter
- * @argv - arg vector
+ * @argc: arg counter
+ * @argv:  arg vector
  * Return: 1 if error, 0 if success
  */
 int main(int argc, char *argv[])
