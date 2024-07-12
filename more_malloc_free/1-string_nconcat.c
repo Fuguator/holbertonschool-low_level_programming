@@ -27,20 +27,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (a == NULL)
 		return (NULL);
 
-	while (s1 != '\0')
-	{
+	for (; *(s1 + i) != '\0'; i++)
 		a[i] = s1[i];
-		i++;
-	}
+
 	k = i;
 	i = 0;
 
-	while (s2 != '\0')
-	{
+	for (; *(s2 + i) != '\0'; i++)
 		a[k + i] = s2[i];
-		i++;
-	}
-	str[i + k] = '\0';
+
+	a[i + k] = '\0';
 
 	return (a);
 }
