@@ -13,4 +13,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	while (a)
 		a[i] = 0;
+
+	return (a);
 }
