@@ -1,14 +1,24 @@
 #include "main.h"
 /**
+ * array_range - func
+ * @min: min
+ * @max: max
+ * Return: a
  */
 int *array_range(int min, int max)
 {
-	int i, *a;
+	int i = 0, *a;
 
-	a = malloc(sizeof(int) * (max - min));
+	if (min > max)
+		return (NULL);
+
+	a = malloc(1 + sizeof(int) * (max - min));
+
+	if (a == NULL)
+		return (NULL);
 
 	for (i = min; i <= max; i++)
-		*(a + i) = i;
+		a[i - min] = i;
 
 	return (a);
 }
