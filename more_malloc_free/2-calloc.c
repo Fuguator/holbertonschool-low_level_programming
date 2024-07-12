@@ -1,5 +1,9 @@
 #include "main.h"
 /**
+ * _calloc - func
+ * @nmemb: var
+ * @size: var
+ * Return: a
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -11,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	a = malloc(sizeof(nmemb) * size);
 
-	while (a)
+	while (i < sizeof(a))
 	{
 		a[i] = 0;
 		i++;
