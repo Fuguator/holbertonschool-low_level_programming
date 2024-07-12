@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * string_nconcat - func
  * @s1: str1
@@ -8,8 +9,10 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0;
+	unsigned int i = 0,len1 = 0,len2 = 0;
 	char *a;
+
+	int b = strlen(s1);
 
 	if (s1 != NULL)
 		for (; *(s1 + i) != '\0'; i++)
