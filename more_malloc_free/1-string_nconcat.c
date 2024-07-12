@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * string_nconcat - func
  * @s1: str1
@@ -14,12 +13,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 
 	if (s1 != NULL)
-		while (s1 != '\0')
+		for (; *(s1 + i) != '\0'; i++)
 			len1++;
+	i = 0;
 
 	if (s2 != NULL)
-		while (s2 != '\0')
+		while (; *(s2 + i) != '\0'; i++)
 			len2++;
+	i = 0;
 
 	a = malloc(sizeof(char) * (len1 + len2) + 1);
 
