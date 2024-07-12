@@ -1,8 +1,16 @@
+#include <stdio.h>
 /**
+ * main - func
+ * Return: 0
  */
-struct dog
+int main(void)
 {
-	char *name;
-	float age;
-	char *owner;
+	struct dog
+	{
+		char *name;
+		float age;
+		char *owner;
+	}
+	printf(dog);
+	return (0);
 }
