@@ -5,6 +5,7 @@
  * @s1: str1
  * @s2: str2
  * @n: var
+ * len2 = (strlen(s2) >= n) * n + (strlen(s2) < n) * strlen(s2);
  * Return: strncat
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -13,10 +14,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 
 	if (s1 != NULL)
-		len1 = strlen(s1);
+		while (s1 != '\0')
+			len1++;
 
 	if (s2 != NULL)
-		len2 = (strlen(s2) >= n) * n + (strlen(s2) < n) * strlen(s2);
+		while (s2 != '\0')
+			len2++;
 
 	a = malloc(sizeof(char) * (len1 + len2) + 1);
 
