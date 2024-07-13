@@ -1,6 +1,8 @@
 #include "dog.h"
 #include <stdio.h>
 /**
+ * print_dog - func
+ * @d: var
  */
 void print_dog(struct dog *d)
 {
