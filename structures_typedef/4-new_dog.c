@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 /**
  * new_dog - func
@@ -11,12 +10,19 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int i = 0, lenName = 0, lenOwner = 0;
+
 	dog_t *dog = malloc(sizeof(dog_t));
 
 	if (dog == NULL)
 		return (NULL);
 
-	(*dog).name = malloc(strlen(name) + 1);
+	while (name != '\0')
+		lenName++;
+	while (owner != '\0')
+		lenOwner++;
+
+	(*dog).name = malloc(lenName + 1);
 
 	if ((*dog).name == NULL)
 	{
@@ -26,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	(*dog).age = age;
 
-	(*dog).owner = malloc(strlen(owner) + 1);
+	(*dog).owner = malloc(lenOwner + 1);
 
 	if ((*dog).owner == NULL)
 	{
