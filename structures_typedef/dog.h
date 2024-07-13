@@ -1,16 +1,9 @@
-#include <stdio.h>
-/**
- * main - func
- * Return: 0
- */
-int main(void)
+#ifndef DOG_H
+#define DOG_H
+struct dog
 {
-	struct dog
-	{
-		char *name;
-		float age;
-		char *owner;
-	}
-	printf(dog);
-	return (0);
-}
+	char *name;
+	float age;
+	char *owner;
+};
+#endif
