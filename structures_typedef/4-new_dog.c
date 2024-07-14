@@ -2,42 +2,78 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strlen - func
+ * @s: pointer
+ * Return: length of a string
+ */
+int _strlen(char *s)
+{
+	int a = 0;
+
+	while (s[a] != '\0')
+		a++;
+
+	return (a);
+}
+/**
+ * _strcpy - func
+ * @dest: variable
+ * @src: variable
+ * Return: dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len = 0, a;
+
+	while (src[len] != '\0')
+		len++;
+
+	for (a = 0; a < len; a++)
+		dest[a] = src[a];
+
+	dest[a] = '\0';
+
+	return (dest);
+}
+/**
  * new_dog - func
  * @name: var
  * @age: var
  * @owner: var
  * Return: dog
  */
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog = malloc(sizeof(dog_t));
+	int lenName, lenOwner;
+	dog_t = *dog;
+
+	dog = malloc(sizeof(dog_t));
 
 	if (dog == NULL)
 		return (NULL);
 
-	(*dog).name = malloc(_strlen(name) + 1);
+	lenName = _strlen(name);
+
+	(*dog).name = malloc(sizeof(char) * (lenName + 1));
 
 	if ((*dog).name == NULL)
 	{
-		free((*dog).name), free(dog);
+		free(dog);
 		return (NULL);
 	}
 
-	(*dog).age = age;
+	(*dog).name = _strcpy((*dog).name, name), (*dog).age = age, len_owner = _strlen(owner);
 
-	(*dog).owner = malloc(_strlen(owner) + 1);
-
+	(*dog).owner = malloc(sizeof(char) * (lenOwner + 1));
+	
 	if ((*dog).owner == NULL)
 	{
-		free((*dog).owner), free((*dog).name), free(dog);
+		free((*dog).name);
+		free(dog);
 		return (NULL);
 	}
 
-	_strcpy((*dog).name, name), _strcpy((*dog).owner, owner);
-	(*dog).age = age;
+	(*dog).owner = _strcpy((*dog).owner, owner);
 
 	return (dog);
 }
