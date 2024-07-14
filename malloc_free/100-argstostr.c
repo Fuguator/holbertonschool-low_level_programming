@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (; i <= ac; i++)
+	for (; i < ac; i++)
 		for (; av[i][j]; j++)
 			k++;
 
@@ -30,8 +30,8 @@ char *argstostr(int ac, char **av)
 			a[k] = av[i][j];
 			k++;
 		}
-		a[k] = '\n';
 		k++;
+		a[k] = '\n';
 	}
 	a[k] = 0;
 
