@@ -10,21 +10,25 @@
 char **strtow(char *str)
 {
 	char *a = NULL;
-	unsigned int i = 0, j = 0, k;
+	unsigned int i = 0, j = 0, k = 0;
 
 	if (strncmp(str, "", 1) || str == NULL)
 		return (NULL);
+
 	a = malloc((i + j + 1) * sizeof(char));
+
 	if (a == NULL)
 		return (NULL);
-	for (k = 0; k < i; k++)
+
+	for (; k < i; k++)
 		a[k] = str[k];
-	i = k;
-	for (k = 0; k < j; k++)
-	{
+
+	i = k = 0;
+
+	for (; k < j; k++, i++)
 		a[i] = str[k];
-		i++;
-	}
-	a[i] = '\0';
-	return (a);
+
+	a[i] = 0;
+
+	return (NULL);
 }
