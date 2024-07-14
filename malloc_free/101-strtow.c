@@ -26,5 +26,5 @@ char **strtow(char *str)
 		i++;
 	}
 	a[i] = '\0';
-	return (NULL);
+	return (a);
 }
