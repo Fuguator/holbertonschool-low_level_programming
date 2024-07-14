@@ -30,8 +30,8 @@ char *argstostr(int ac, char **av)
 			a[k] = av[i][j];
 			k++;
 		}
-		k++;
 		a[k] = '\n';
+		k++;
 	}
 	a[k] = 0;
 
