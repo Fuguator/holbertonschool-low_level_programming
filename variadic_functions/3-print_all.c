@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		for (; *(format + i); i++)
+		while (*(format + i++))
 		{
 			j = 1;
 
