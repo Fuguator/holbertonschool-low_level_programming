@@ -31,6 +31,8 @@ void print_all(const char * const format, ...)
 				if (!a)
 					a = "(nil)";
 				break;
+			default:
+				continue;
 			}
 		}
 		while (format[i] && j)
