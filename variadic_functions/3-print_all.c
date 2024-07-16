@@ -12,11 +12,11 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (*(format + i++))
+		while (*(format + i))
 		{
-			j = 1;
+			j = 1, i++;
 
-			switch (*(format + i--))
+			switch (*(format + (i--)))
 			{
 			case 'c':
 				printf("%c", va_arg(ap, int));
