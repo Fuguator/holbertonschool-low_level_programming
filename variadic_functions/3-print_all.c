@@ -32,9 +32,7 @@ void print_all(const char * const format, ...)
                                 break;
 			case 's':
 				a = va_arg(ap, char *);
-				if (a)
-					printf("%s", a);
-				else
+				if (!a)
 					a = "(nil)";
 				break;
 			}
