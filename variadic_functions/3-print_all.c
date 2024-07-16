@@ -33,6 +33,8 @@ void print_all(const char * const format, ...)
 					a = "(nil)";
 				printf("%s", a);
 				break;
+			default:
+				continue;
 			}
 		while (*(format + i) && j)
 			printf(", "), j = 0;
