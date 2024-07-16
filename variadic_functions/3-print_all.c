@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	{
 		for (; *(format + i); i++)
 		{
-			k = 1;
+			j = 1;
 
 			switch (*(format + i--))
 			case 'c':
