@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				continue;
 			}
 		}
-		while (*(formai + i) && j)
+		while (*(format + i) && j)
 			printf(", ");
 		j = 0;
 	}
