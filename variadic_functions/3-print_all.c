@@ -34,6 +34,8 @@ void print_all(const char * const format, ...)
 				a = va_arg(ap, char *);
 				a != NULL ? printf("%s", a) : printf("(nil)");
 				break;
+			default:
+				continue;
 			}
 		}
 		while (*(format + i) && j)
