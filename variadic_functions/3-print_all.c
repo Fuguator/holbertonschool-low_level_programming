@@ -36,10 +36,10 @@ void print_all(const char * const format, ...)
 			default:
 				continue;
 			}
-		}
 		while (*(format + i) && j)
 			printf(", ");
 		j = 0;
+		}
 	}
 	printf("\n");
 	va_end(ap);
