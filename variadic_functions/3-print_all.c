@@ -11,12 +11,11 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-
 	if (format)
 	{
-		while (*(format + (i++)))
+		while (*(format + i))
 		{
-			j = 1;
+			j = 1, i++;
 			switch (*(format + (i--)))
 			{
 			case 'c':
@@ -33,8 +32,6 @@ void print_all(const char * const format, ...)
 				if (!a)
 					a = "(nil)";
 				break;
-			default:
-				continue;
 			}
 		while (*(format + i) && j)
 			printf(", "), j = 0;
