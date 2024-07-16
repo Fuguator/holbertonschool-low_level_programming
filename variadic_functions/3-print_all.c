@@ -30,9 +30,6 @@ void print_all(const char * const format, ...)
                         case 'l':
                                 printf("%ld", va_arg(ap, long int));
                                 break;
-                        case 'd':
-                                printf("%f", va_arg(ap, double));
-                                break;
 			case 's':
 				a = va_arg(ap, char *);
 				a != NULL ? printf("%s", a) : printf("(nil)");
