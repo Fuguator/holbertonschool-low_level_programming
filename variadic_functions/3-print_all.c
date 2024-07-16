@@ -31,6 +31,7 @@ void print_all(const char * const format, ...)
 				a = va_arg(ap, char*);
 				if (!a)
 					a = "(nil)";
+				printf("%s", a);
 				break;
 			}
 		while (*(format + i) && j)
