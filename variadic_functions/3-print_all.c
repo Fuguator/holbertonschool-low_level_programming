@@ -26,9 +26,6 @@ void print_all(const char * const format, ...)
 			case 'i':
 				printf("%d", va_arg(ap, int));
 				break;
-                        case 'l':
-                                printf("%ld", va_arg(ap, long int));
-                                break;
 			case 's':
 				a = va_arg(ap, char *);
 				if (!a)
