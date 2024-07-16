@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (*(format + i))
+		while (format[i])
 		{
 			j = 1, i++;
 			switch (format[i])
@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 				break;
 			}
 		}
-		while (*(format + i) && j)
+		while (format[i] && j)
 			printf(", ");
 		j = 0;
 	}
