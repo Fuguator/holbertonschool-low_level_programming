@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (*((i++) + format))
+		while (*(format + (i++)))
 		{
 			j = 1;
 			switch (*(format + (i--)))
@@ -37,8 +37,7 @@ void print_all(const char * const format, ...)
 				continue;
 			}
 		while (*(format + i) && j)
-			printf(", ");
-		j = 0;
+			printf(", "), j = 0;
 		}
 	}
 	printf("\n");
