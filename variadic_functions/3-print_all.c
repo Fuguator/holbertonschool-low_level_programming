@@ -17,6 +17,7 @@ void print_all(const char * const format, ...)
 			j = 1;
 
 			switch (*(format + i--))
+			{
 			case 'c':
 				printf("%c", va_arg(ap, char));
 				break;
@@ -36,6 +37,7 @@ void print_all(const char * const format, ...)
 				a = va_arg(ap, char *);
 				a != NULL ? printf("%s", a) : printf("(nil)");
 				break;
+			}
 		}
 		while (*(format + i) && j)
 			printf(", ");
