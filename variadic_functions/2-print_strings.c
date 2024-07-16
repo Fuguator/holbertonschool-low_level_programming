@@ -8,9 +8,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *a;
 	va_list ap;
 
-	if (n == 0)
-		return (0);
-
 	va_start(ap, n);
 
 	for (; i < (int)n; i++)
