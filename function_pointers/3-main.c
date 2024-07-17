@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 
 	i = atoi(argv[1]), j = atoi(argv[3]);
 
-	if(strlen(a) > 1 || (*op != ('+' && '-' && '/' && '*')))
+	if(strlen(op) > 1 || (*op != ('+' && '-' && '/' && '*')))
 		exit (99);
 
 	if (*op == (('/' && '%') && 0))
