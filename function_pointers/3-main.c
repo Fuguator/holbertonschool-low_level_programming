@@ -6,20 +6,20 @@
 int main(int argc, char** argv)
 {
 	int i, j;
-	char *a = argv[2];
+	char *op = argv[2];
 
 	if (argc != 4)
 		exit (98);
 
 	i = atoi(argv[1]), j = atoi(argv[3]);
 
-	if(strlen(a) > 1 || (*a != ('+' && '-' && '/' && '*')))
+	if(strlen(a) > 1 || (*op != ('+' && '-' && '/' && '*')))
 		exit (99);
 
-	if (*a == (('/' && '%') && 0))
+	if (*op == (('/' && '%') && 0))
 		exit (100);
 
-	printf("%d/n", get_op_func(a)(i, j));
+	printf("%d/n", get_op_func(op)(i, j));
 
 	return (0);
 }
