@@ -1,4 +1,4 @@
-#include "function_pointer.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <string.h>
 /**
@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 	if (*a == (('/', '%') && 0))
 		exit (100);
 
-	printf("%d/n", get_op_func(i, j));
+	printf("%d/n", get_op_func(a)(i, j));
 
 	return (0);
 }
