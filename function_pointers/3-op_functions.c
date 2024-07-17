@@ -6,7 +6,9 @@
  * Return: res
  */
 int op_add(int a, int b)
+{
 	return (a + b);
+}
 /**
  * op_sub - func
  * @a: var
@@ -14,7 +16,9 @@ int op_add(int a, int b)
  * Return: res
  */
 int op_sub(int a, int b)
+{
 	return (a - b);
+}
 /**
  * op_mul - func
  * @a: var
@@ -22,7 +26,9 @@ int op_sub(int a, int b)
  * Return: res
  */
 int op_mul(int a, int b)
+{
 	return (a * b);
+}
 /**
  * op_div - func
  * @a: var
@@ -30,7 +36,9 @@ int op_mul(int a, int b)
  * rETURN: RES
  */
 int op_div(int a, int b)
+{
 	return (a / b);
+}
 /**
  * op_mod - func
  * @a: var
@@ -38,4 +46,6 @@ int op_div(int a, int b)
  * Return: res
  */
 int op_mod(int a, int b)
+{
 	return (a % b);
+}
