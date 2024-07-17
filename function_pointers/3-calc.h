@@ -1,5 +1,6 @@
 #ifndef CALC.H
 #define CALC.H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>

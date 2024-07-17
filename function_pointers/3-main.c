@@ -13,10 +13,10 @@ int main(int argc, char** argv)
 
 	i = atoi(argv[1]), j = atoi(argv[3]);
 
-	if(strlen(a) > 1 || (*a != ('+', '-', '/', '*')))
+	if(strlen(a) > 1 || (*a != ('+' && '-' && '/' && '*')))
 		exit (99);
 
-	if (*a == (('/', '%') && 0))
+	if (*a == (('/' && '%') && 0))
 		exit (100);
 
 	printf("%d/n", get_op_func(a)(i, j));
