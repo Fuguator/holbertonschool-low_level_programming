@@ -18,8 +18,8 @@ int (*get_op_func(char *s))(int, int)
 
     while (i < sizeof(ops) / sizeof(opt_t))
     {
-	    if (*s == *ops[i])
-		    return (ops[i]);
+	    if (*s == *ops[i].s)
+		    return (ops[i].f);
 	    i++;
     }
     return (NULL);
