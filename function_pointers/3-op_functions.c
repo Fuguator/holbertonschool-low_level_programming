@@ -33,7 +33,7 @@ int op_mul(int a, int b)
  * op_div - func
  * @a: var
  * @b: var
- * rETURN: RES
+ * Return: res
  */
 int op_div(int a, int b)
 {
