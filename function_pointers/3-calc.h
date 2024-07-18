@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+/**
+ * struct op - func
+ * @op:var
+ * @f: var
+ */
 typedef struct op
 {
 	char *op;
