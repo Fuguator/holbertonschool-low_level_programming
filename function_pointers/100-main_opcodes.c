@@ -27,6 +27,6 @@ int main(int argc, char **argv)
 		printf("Error");
 		exit(2);
 	}
-
+	putchar(opc(main, i));
 	return(0);
 }
