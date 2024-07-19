@@ -6,13 +6,13 @@
  * @i: var
  * Return: 10
  */
-int opc(int (*main_ptr)(int, char **), int i)
+int opc(int (*main_ptr)(int, char **), int x)
 {
 	int a = 0;
 
-	for (; a < i - 1; a++)
-		printf("%02x ", ((unsigned char *)main_ptr)[i]);
-	printf("%02x", ((unsigned char *)main_ptr)[i]);
+	for (; a < x - 1; a++)
+		printf("%02x ", ((unsigned char *)main_ptr)[x]);
+	printf("%02x", ((unsigned char *)main_ptr)[x]);
 	return (10);
 }
 /**
@@ -37,6 +37,6 @@ int main(int argc, char **argv)
 		printf("Error");
 		exit(2);
 	}
-	putchar(opc(main, i));
+	putchar(opc(main, x));
 	return (0);
 }
