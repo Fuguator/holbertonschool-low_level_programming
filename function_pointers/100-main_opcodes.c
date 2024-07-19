@@ -8,7 +8,7 @@ int opc(int i, int (*main_ptr)(int, char **))
 
 	for (; a < i; a++)
 		printf("%02x ", ((unsigned char *)main_ptr)[i]);
-	return;
+	return (10);
 }
 /**
  */
