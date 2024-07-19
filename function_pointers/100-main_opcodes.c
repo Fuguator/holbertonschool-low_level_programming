@@ -7,7 +7,7 @@ void opc(int i, int (*main_ptr)(int, char **))
 	int a = 0;
 
 	for (; a < i; a++)
-		printf("%02x ", ((char *)(*main_ptr + i));
+		printf("%02x ", ((char *)(*main_ptr + i)));
 }
 /**
  */
