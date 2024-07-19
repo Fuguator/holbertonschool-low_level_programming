@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * opc - func
+ * @main_ptr: var
+ * @i: var
+ * Return: 10
  */
 int opc(int (*main_ptr)(int, char **), int i)
 {
@@ -12,6 +16,10 @@ int opc(int (*main_ptr)(int, char **), int i)
 	return (10);
 }
 /**
+ * main - func
+ * @argc: var
+ * @argv: var
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
