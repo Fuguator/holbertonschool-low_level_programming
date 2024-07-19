@@ -2,12 +2,13 @@
 #include <stdlib.h>
 /**
  */
-void opc(int i, int (*main_ptr)(int, char **))
+int opc(int i, int (*main_ptr)(int, char **))
 {
 	int a = 0;
 
 	for (; a < i; a++)
 		printf("%02x ", ((unsigned char *)main_ptr)[i]);
+	return;
 }
 /**
  */
