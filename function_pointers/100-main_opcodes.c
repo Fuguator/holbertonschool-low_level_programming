@@ -38,5 +38,5 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 	putchar(opc(main, i));
-	return(0);
+	return (0);
 }
