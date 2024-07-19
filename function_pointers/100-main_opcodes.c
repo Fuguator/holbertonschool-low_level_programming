@@ -3,7 +3,7 @@
 /**
  * opc - func
  * @main_ptr: var
- * @i: var
+ * @x: var
  * Return: 10
  */
 int opc(int (*main_ptr)(int, char **), int x)
