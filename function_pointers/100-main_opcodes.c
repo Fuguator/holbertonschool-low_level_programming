@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  */
-int opc(int i, int (*main_ptr)(int, char **))
+int opc(int (*main_ptr)(int, char **), int i)
 {
 	int a = 0;
 
