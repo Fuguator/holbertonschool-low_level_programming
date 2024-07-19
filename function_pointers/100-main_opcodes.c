@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ */
+void opc(int i, int (*main_ptr)(int, char **))
+{
+	int a = 0;
 
+	for (; a < i; a++)
+		printf("%02x ", ((char *)(*f + i));
+}
 /**
  */
 int main(int argc, char **argv)
