@@ -7,12 +7,12 @@ global main
 section .text
 
 main:
-	mov rax, 0x1
-	mov rdi, 0x1
-	mov rsi, message
-	mov rdx, message_length
+	mov eax, 0x1
+	mov ebx, 0x1
+	mov ecx, message
+	mov edx, message_length
 	SYSCALL
 
-	mov rax, 0x3C
-	mov rdi, 0x0
+	mov eax, 0x3C
+	mov ebx, 0x0
 	SYSCALL
