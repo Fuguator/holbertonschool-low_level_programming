@@ -1,6 +1,6 @@
 section .data:
         message: db "Hello, World", 0xA
-        message_length equ $-message
+        message_length: equ $-message
 
 global main
 
