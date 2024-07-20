@@ -1,5 +1,5 @@
 section .data:
-        message: db "Hello World!", 0xA
+        message: db "Hello, World", 0xA
         message_length equ $-message
 
 global _start
