@@ -1,18 +1,18 @@
-section .data
-	txt: db "Hello, World" , 0xA
-	txtl: EQU $ - txt
+global _start
 
-global main
+section .text:
 
-section .text
+_start:
+	mov eax, 0x4
+	mov ebx, 1
+	mov ecx, message
+	mov edx, message_length
+	int 0x80
 
-main:
-	MOV rax, 0x1
-	MOV rdi, 0x1
-	MOV rsi, txt
-	MOV rdx, txtl
-	SYSCALL
+	mov eax, 0x1
+	mov ebx, 0
+	int 0x80
 
-	MOV rax, 0x3C
-	MOV rdi, 0x0
-	SYSCALL
+section .data:
+	message: db "Hello World!"
+	message_length equ $-message
