@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdlib.h>
 /**
  * struct list_s - srtucture
  * @str: data
