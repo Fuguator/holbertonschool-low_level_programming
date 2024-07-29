@@ -10,7 +10,7 @@ size_t list_len(const list_t *h)
 
   while(h != NULL)
     {
-        printf("[%d] %s\n", h->len, h->str);
+        printf("[%d]\n", h->len);
         h = h->next;
         i++;
     }
