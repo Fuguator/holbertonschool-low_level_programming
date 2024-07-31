@@ -6,12 +6,12 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int i = 0;
 	const dlistint_t *a = h;
+	int i = 0;
 
 	for (; h; i++)
 	{
-		printf("%d", a->n);
+		printf("%d", a->h);
 		a = a->next;
 	}
 	return (i);
