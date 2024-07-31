@@ -8,14 +8,10 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int len = 0;
 	list_t *node_end, *tmp;
 
 	if (!str)
 		return (NULL);
-
-	while (*(str + len))
-		len++;
 
 	node_end = malloc(sizeof(list_t));
 
