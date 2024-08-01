@@ -6,7 +6,7 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum = 0, i = 0;
+	int sum = 0;
 	dlistint_t *a = head;
 
 	if (!head)
@@ -14,9 +14,8 @@ int sum_dlistint(dlistint_t *head)
 
 	while (a)
 	{
-		i += a->n;
+		sum += a->n;
 		a = a->next;
-		sum += i;
 	}
 	return (sum);
 }
