@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ptint_num - func
+ * print_num - func
  * @n: bit
  */
 void print_num(unsigned long int n)
