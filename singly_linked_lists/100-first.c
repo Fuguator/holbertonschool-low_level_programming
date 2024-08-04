@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "lists.h"
 void f(void) __attribute__ ((constructor));
 /**
  * f - func
