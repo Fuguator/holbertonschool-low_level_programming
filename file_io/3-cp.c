@@ -43,27 +43,24 @@ void cp_file(int file_from, int file_to, char *src, char *dest)
 	char *buffer = malloc(sizeof(char) * 1024);
 	int r, w, truee = 1;
 
-	while (truee)
+	while (r = read(file_from, buffer, sizeof(buffer)) > 0)
 	{
-		r = read(file_from, buffer, sizeof(buffer));
-		if (r > 0)
+		w = write(file_to, buffer, r);
+		if (w != r)
 		{
-			w = write(file_to, buffer, r);
-			if (w == -1)
-			{
-				close(file_from);
-				close(file_to);
-				dprintf(2, "Error: Can't write to %s\n", dest);
-				exit(99);
-			}
-		}
-		else
-		{
-			close(file_from), close(file_to);
-			dprintf(2, "Error: Can't read from file %s\n", src);
-			exit(98);
+			close(file_from);
+			close(file_to);
+			dprintf(2, "Error: Can't write to %s\n", dest);
+			exit(99);
 		}
 	}
+	if (r == -1)
+	{
+		close(file_from), close(file_to);
+		dprintf(2, "Error: Can't read from file %s\n", src);
+		exit(98);
+	}
+
 }
 /**
  * close_files - closes files
