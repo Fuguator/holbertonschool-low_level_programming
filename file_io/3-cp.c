@@ -41,7 +41,7 @@ int create_file_to(const char *filename)
 void cp_file(int file_from, int file_to, char *src, char *dest)
 {
 	char *buffer = malloc(sizeof(char) * 1024);
-	int r, w, truee = 1;
+	int r, w;
 
 	while (r = read(file_from, buffer, sizeof(buffer)) > 0)
 	{
