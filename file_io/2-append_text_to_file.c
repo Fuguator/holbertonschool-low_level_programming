@@ -3,7 +3,7 @@
  * append_text_to_file - func
  * @filename: file
  * @text_content: text
- * Retuirn: -1 if error, 1 otherwise
+ * Return: -1 if error, 1 otherwise
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
