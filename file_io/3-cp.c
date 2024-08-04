@@ -1,68 +1,106 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <errno.h>
-#include <string.h>
-#include <fcntl.h>
-#include <stdio.h>
 /**
- * buf_crt - creates buffer
- * @f: file
- * Return: address of buf
+ * open_file_from - opens file
+ * @filename: name
+ * Return: file
  */
-char *buf_crt(char *a)
+int open_file_from(const char *filename)
 {
-  char *buf;
+	int file = open(filename, O_RDONLY);
 
-  buf = malloc(sizeof(char) * 1024);
-
-  if (!buf)
-    dprintf(STDERR_FILENO,
-      "Error: Can't write to %s\n", a), exit(99);
-
-  return (buf);
+	if (file == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", filename);
+		exit(98);
+	}
+	return (file);
 }
-
-void Fclose(int fd)
+/**
+ * create_file_to - crates file
+ * @filename: name
+ * Return: file
+ */
+int create_file_to(const char *filename)
 {
-  int c;
+	int file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-  c = close(fd);
-
-  if (c == -1)
-    dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
+	if (file == -1)
+	{
+		dprintf(2, "Error: Can't write to %s\n", filename);
+		exit(99);
+	}
+	return (file);
 }
+/**
+ * cp_file - copies file from src to dest
+ * @file_from: name
+ * @file_to: name
+ * @src: source file
+ * @dest: destination file
+ */
+void cp_file(int file_from, int file_to, char *src, char *dest)
+{
+	char *buffer = malloc(sizeof(char) * 1024);
+	int r, w, truee = 1;
 
+	while (truee)
+	{
+		r = read(file_from, buffer, sizeof(buffer));
+		if (r > 0)
+		{
+			w = write(file_to, buffer, r);
+			if (w == -1)
+			{
+				close(file_from);
+				close(file_to);
+				dprintf(2, "Error: Can't write to %s\n", dest);
+				exit(99);
+			}
+		}
+		else
+		{
+			close(file_from), close(file_to);
+			dprintf(2, "Error: Can't read from file %s\n", src);
+			exit(98);
+		}
+	}
+}
+/**
+ * close_files - closes files
+ * STDERR_FILENO were replaced to 2
+ * @file_from: name
+ * @file_to: name
+ */
+void close_files(int file_from, int file_to)
+{
+	if (close(file_from) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", file_from);
+		exit(100);
+	}
+	if (close(file_to) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", file_to);
+		exit(100);
+	}
+}
+/**
+ * main - func
+ * @argc: var
+ * @argv: var
+ * Return: 0
+ */
 int main(int argc, char **argv)
 {
-  int file_from, file_to, r, w;
-  char *buf;
+	int file_from = open_file_from(argv[1]), file_to = create_file_to(argv[2]);
 
-  if (argc != 3)
-    dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 
-  buf = buf_crt(argv[2]);
-  file_from = open(argv[1], O_RDONLY);
-  r = read(file_from, buf, 1024);
-  file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-  while (1)
-  {
-    r = read(file_from, buf, 1024);
-    if (r == -1)
-      dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),free(buf), exit(98);
-    if (r > 0)
-    {
-      w = write(file_to, buf, r);
-      if (w != r || w == -1)
-        dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),free(buf), exit(99);
-    }
-  }
-
-  free(buf);
-  Fclose(file_from);
-  Fclose(file_to);
-
-  return (0);
+	cp_file(file_from, file_to, argv[1], argv[2]);
+	close_files(file_from, file_to);
+	return (0);
 }
