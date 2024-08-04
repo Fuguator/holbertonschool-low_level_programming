@@ -43,7 +43,7 @@ void cp_file(int file_from, int file_to, char *src, char *dest)
 	char *buffer = malloc(sizeof(char) * 1024);
 	int r, w;
 
-	while (r = read(file_from, buffer, sizeof(buffer)) > 0)
+	while ((r = read(file_from, buffer, sizeof(buffer))) > 0)
 	{
 		w = write(file_to, buffer, r);
 		if (w != r)
