@@ -26,8 +26,14 @@ int main(int argc, char **argv)
         exit(99);
     }
 
-    while ((r = read(file_from, buf, sizeof(buf))) > 0)
+    while (1)
     {
+	    r = read(file_from, buf, sizeof(buf));
+	    if (r == -1)
+    {
+        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+        exit(98);
+    }
         w = write(file_to, buf, r);
         if (w == -1 || w != r)
         {
@@ -35,11 +41,7 @@ int main(int argc, char **argv)
             exit(99);
         }
     }
-    if (r == -1)
-    {
-        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-        exit(98);
-    }
+
     if (close(file_from) == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
